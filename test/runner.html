@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <title>Fingers Test Suite</title>
+
+  <link rel="stylesheet" href="../node_modules/gulp-mocha-phantomjs/node_modules/mocha-phantomjs/node_modules/mocha/mocha.css">
+
+  <style>
+    body { user-select: none; }
+    #fixtures { position: fixed; top: 0; left: 0; }
+    .touchme {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mocha"></div>
+
+  <div id="fixtures">
+    <div class="touchme"></div>
+    <div class="touchme"></div>
+    <div class="touchme"></div>
+  </div>
+
+  <script src="../node_modules/gulp-mocha-phantomjs/node_modules/mocha-phantomjs/node_modules/mocha/mocha.js"></script>
+  <script>
+    mocha.setup({
+      ui: 'bdd',
+      slow: 100,
+      bail: true,
+      ignoreLeaks: true
+    });
+  </script>
+  <script src="../node_modules/chai/chai.js"></script>
+  <script src="../node_modules/sinon-chai/lib/sinon-chai.js"></script>
+  <script src="../node_modules/sinon/pkg/sinon.js"></script>
+  <script>
+    var should = chai.should();
+  </script>
+
+  <script src="../node_modules/hammer-simulator/index.js"></script>
+  <script>
+    Simulator.setType('touch');
+    Simulator.events.touch.fakeSupport();
+  </script>
+
+  <!-- lib and tests -->
+  <script src="../dist/finger.js"></script>
+  <script src="suite.js"></script>
+
+  <!-- run mocha -->
+  <script>
+    (window.mochaPhantomJS ? mochaPhantomJS : mocha).run();
+  </script>
+</body>
+</html>

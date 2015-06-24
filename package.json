@@ -1,0 +1,45 @@
+{
+  "name": "fingers",
+  "version": "0.0.0",
+  "description": "Touch & gestures, fingers in the nose.",
+  "author": "Nicolas Gryman <ngryman@gmail.com> (http://ngryman.sh)",
+  "homepage": "https://ngryman.sh/fingers",
+  "license": "MIT",
+  "repository": "ngryman/fingers",
+  "main": "dist/fingers.js",
+  "files": [
+  ],
+  "scripts": {
+    "build": "npm install && gulp",
+    "test": "gulp test"
+  },
+  "keywords": [
+    "doubletap",
+    "drag",
+    "event",
+    "flick",
+    "gestures",
+    "mobile",
+    "mouse",
+    "move",
+    "pointer",
+    "swipe",
+    "tablet",
+    "tap",
+    "tappable",
+    "touch"
+  ],
+  "dependencies": {
+    "gulp-eslint": "^0.14.0"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "eslint-config-ngryman": "^0.1.0",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-mocha-phantomjs": "^0.6.1",
+    "hammer-simulator": "^0.0.0",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
+  }
+}
