@@ -30,15 +30,15 @@
     "touch"
   ],
   "dependencies": {
-    "gulp-eslint": "^0.14.0"
+    "gulp-eslint": "^3.0.1"
   },
   "devDependencies": {
-    "chai": "^2.3.0",
-    "eslint-config-ngryman": "^0.1.0",
+    "chai": "^3.5.0",
+    "eslint-config-ngryman": "^1.7.1",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
-    "gulp-mocha-phantomjs": "^0.6.1",
-    "hammer-simulator": "^0.0.0",
+    "gulp-mocha-phantomjs": "^0.12.0",
+    "hammer-simulator": "^0.0.1",
     "sinon": "^1.14.1",
     "sinon-chai": "^2.7.0"
   }
